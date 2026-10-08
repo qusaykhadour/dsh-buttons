@@ -1,0 +1,7 @@
+# dsh-buttons bundle patch.
+#
+# One host row: it registers the POST /api/session.delete route and serves the
+# browser half (`./client`), which adds the Session pick and delete actions.
+- insert:
+    - id: dsh-buttons
+      name: dsh-buttons

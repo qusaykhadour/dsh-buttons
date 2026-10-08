@@ -1,0 +1,58 @@
+{
+  "name": "dsh-buttons",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness plugin: pick Sessions in the sidebar and delete them for good — one row or a whole selected group — together with their log, projection cache and workspace registration. Arabic and English UI.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "cordis.patch.yml",
+    "repair-registry.mjs",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "license": "MIT",
+  "author": "Qusay Ali Khadour",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qusaykhadour/dsh-buttons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qusaykhadour/dsh-buttons/issues"
+  },
+  "homepage": "https://github.com/qusaykhadour/dsh-buttons#readme",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "session",
+    "session-management",
+    "delete",
+    "bulk-delete",
+    "sidebar",
+    "arabic",
+    "rtl"
+  ],
+  "scripts": {
+    "test": "node test/delete-session.test.mjs && node test/client-bundle.test.mjs",
+    "repair": "node repair-registry.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
